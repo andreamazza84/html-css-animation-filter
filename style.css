@@ -2,10 +2,10 @@
     width: 100px;
     height: 100px;
     border: 1px solid red;
-    background-color: none;
+    background-color: transparent;
     transition: background-color 2s;
 }
-.ex-1-square:active{
+.ex-1-square:hover{
     background-color: red;
 }
 /* ******************* */
@@ -114,7 +114,6 @@
 }
 /* ******************* */
 
-
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -143,4 +142,87 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+.ex-12-button:hover .ex-12-top-white{
+  animation-name: move-top;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes move-top {
+  0% {left: 10%;}
+  50% {left: calc(90% - 60px);}
+  100% {left: 10%;}
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+  animation-name: move-bottom;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes move-bottom {
+  0% {right: 20%;}
+  50% {right: calc(90% - 60px);}
+  100% {right: 20%;}
+}
+
+/* ******************** */
+.ex-13-button:hover .ex-13-top-white{
+  animation-name: rotation-top;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotation-top {
+  0%{
+    top: -10px;
+    left: 10%;
+  }
+  25%{
+    top: -10px;
+    left: 95%;
+  }
+  50%{
+    top: 50px;
+    left: 95%;
+  }
+  75%{
+    top: 50px;
+    left: -5%;
+  }
+  100%{
+    top: -10px;
+    left: -5%;
+  }
+}
+
+.ex-13-button:hover .ex-13-bottom-white{
+  animation-name: rotation-bottom;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotation-bottom {
+  0%{
+    bottom: -10px;
+    right: 20%;
+  }
+  25%{
+    bottom: -10px;
+    right: 95%;
+  }
+  50%{
+    bottom: 50px;
+    right: 95%;
+  }
+  75%{
+    bottom: 50px;
+    right: -5%;
+  }
+  100%{
+    bottom: -10px;
+    right: -5%;
+  }
 }
