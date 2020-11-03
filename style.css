@@ -55,7 +55,6 @@
   transform: scale(0.67, 0.67)
 }
 /* ******************* */
-
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
 }
@@ -70,12 +69,25 @@
 }
 .ex-7-img:hover{
   filter: grayscale(100%)  blur(5px);
-
 }
+.ex-8-img{
+  transition: filter, border-radius 2s;
+}
+.ex-8-img:hover{
+  filter: hue-rotate(90deg)  invert(90%);
+  border-radius: 60px 10px 60px 10px;
+}
+/* ******************* */
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: border-radius, transform 2s;
 }
+.ex-9-img:hover{
+  border-radius: 40px;
+  transform: scale(1.2);
+}
+/* ******************* */
 .ex-10-icon {
     font-size: 60px;
 }
